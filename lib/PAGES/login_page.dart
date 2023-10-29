@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/UTILS/routes.dart';
 
 class LoginPage extends StatelessWidget {
+  String name = "";
+  bool changeButton = false;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -44,15 +46,39 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, MyRoutes.HomeRoute);
-                },
-                child: Text("Login"),
-                style: TextButton.styleFrom(
-                  minimumSize: Size(150,40)
-                )),
+            InkWell(
+              onTap: () {
+                
+                Navigator.pushNamed(context, MyRoutes.HomeRoute);
+              },
+              child: Container(
+                width: changeButton ? 50 : 150,
+                height: 50,
+                child: Center(
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                ),
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(8)),
+              ),
+            )
+            // ElevatedButton(
+            //     onPressed: () {
+            //
+            //     },
+            //     child: Text("Login"),
+            //     style: TextButton.styleFrom(
+            //       minimumSize: Size(150,40)
+            //     )),
           ],
         ));
   }
 }
+
+
