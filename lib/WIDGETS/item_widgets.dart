@@ -1,10 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
-import '../MODELS/catalog.dart';
+import '../MODELS/Catalog.dart';
+
 
 class ItemWidget extends StatelessWidget {
   final Item item;
 
+  
   const ItemWidget({required Key key, required this.item})
       : assert(item != null),
         super(key: key);
@@ -18,7 +21,11 @@ class ItemWidget extends StatelessWidget {
         onTap: () {
           print("${item.name}pressed");
         },
-        leading: Image.network(item.image),
+        leading: SizedBox(
+          width: 50,
+          child: Image.network(item.image)
+          
+          ),
         title: Text(item.name),
         subtitle: Text(item.desc),
         trailing: Text(
