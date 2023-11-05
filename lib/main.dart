@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     String value = "days of flutter";
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.amber),
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: MyRoutes.HomeRoute,
       routes: {
