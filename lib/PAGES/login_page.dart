@@ -4,6 +4,8 @@ import 'package:flutter_application_1/UTILS/routes.dart';
 class LoginPage extends StatelessWidget {
   String name = "";
   bool changeButton = false;
+
+  LoginPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -14,28 +16,28 @@ class LoginPage extends StatelessWidget {
               "ASSETS/IMAGES/undraw_Login_re_4vu2.png",
               fit: BoxFit.cover,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
-            Text(
+            const Text(
               "Login",
               style: TextStyle(fontSize: 25.0),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
               child: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: "Username",
                       labelText: "Enter Username",
                     ),
                   ),
                   TextFormField(
                     obscureText: true,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: "Password",
                       labelText: "Enter Password",
                     ),
@@ -43,7 +45,7 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
             InkWell(
@@ -54,7 +56,10 @@ class LoginPage extends StatelessWidget {
               child: Container(
                 width: changeButton ? 50 : 150,
                 height: 50,
-                child: Center(
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(8)),
+                child: const Center(
                   child: Text(
                     "Login",
                     style: TextStyle(
@@ -63,9 +68,6 @@ class LoginPage extends StatelessWidget {
                         fontSize: 18),
                   ),
                 ),
-                decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: BorderRadius.circular(8)),
               ),
             )
             // ElevatedButton(

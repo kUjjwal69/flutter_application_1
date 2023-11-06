@@ -9,8 +9,7 @@ class ItemWidget extends StatelessWidget {
 
   
   const ItemWidget({required Key key, required this.item})
-      : assert(item != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class ItemWidget extends StatelessWidget {
           "\$${item.price}",
           textScaleFactor: 1.5 ,
           style:
-              TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),
+              const TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),
         ),
       ),
     );
