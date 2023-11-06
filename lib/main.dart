@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
     int days = 30;
     String value = "days of flutter";
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: ThemeData(),
       initialRoute: MyRoutes.HomeRoute,
       routes: {
         "/": (context) => const Homepage(),
