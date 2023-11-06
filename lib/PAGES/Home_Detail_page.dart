@@ -48,8 +48,8 @@ class HomeDeatilsPage extends StatelessWidget {
                         .all(const StadiumBorder(),
                         )
                       )
-                      , child: "Buy".text.make()
-                      ).wh(100,50)
+                      , child: "Add to Cart".text.make()
+                      ).wh(120,50)
                     ],
                   ).p32(),
         ),
@@ -74,6 +74,7 @@ class HomeDeatilsPage extends StatelessWidget {
                   context.captionStyle).xl
                   .make(),
                   10.heightBox,
+                  "Justo no diam dolor sed sed labore. Dolore at dolore sanctus duo clita erat. Est eirmod dolor tempor sanctus vero sea duo. Et amet aliquyam erat duo voluptua ipsum consetetur sit, kasd est sanctus no sanctus dolores takimata amet, sit sit stet eirmod ipsum ipsum est ipsum. Et dolor nonumy.".text.textStyle(context.captionStyle).make().p12(),
                  ],
                 ).py64(),
                ),

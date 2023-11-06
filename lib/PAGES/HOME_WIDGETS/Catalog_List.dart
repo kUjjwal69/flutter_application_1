@@ -73,7 +73,7 @@ class CatalogItem extends StatelessWidget {
                       .all(const StadiumBorder(),
                       )
                     )
-                    , child: "Buy".text.make()
+                    , child: "Add to cart".text.make()
                     )
                   ],
                 )
